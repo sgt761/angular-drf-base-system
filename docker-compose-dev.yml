@@ -1,0 +1,36 @@
+version: "3.9"
+services:
+  frontend:
+    build: ./frontend
+    command: ng serve --host 0.0.0.0 --poll 2000 --disable-host-check
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    ports:
+      - "4200:4200"
+
+  backend:
+    build: ./backend
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./backend:/app
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./backend/.env
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: seis_horas_bd
+      POSTGRES_USER: seis_admin
+      POSTGRES_PASSWORD: i&yg$76PcmQZCo&4
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5431:5432"
+
+volumes:
+  postgres_data:

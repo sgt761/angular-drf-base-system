@@ -1,0 +1,13 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <label>RUT</label>
+  <input type="text" formControlName="rut" placeholder="Ingrese su RUT" />
+
+  <label>Contraseña</label>
+  <input type="password" formControlName="password" placeholder="Ingrese su contraseña" />
+
+  <button type="submit" [disabled]="form.invalid">Ingresar</button>
+
+  <div class="error">
+    {{ mensaje }}
+  </div>
+</form>

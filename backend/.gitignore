@@ -1,0 +1,73 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django static/media files (si usas collectstatic)
+static/
+media/
+
+# Environment variables
+.env
+*.env
+
+# Virtual envs
+venv/
+env/
+ENV/
+.venv/
+
+# IDEs/editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Database files (si usas SQLite en dev)
+db.sqlite3
+*.sqlite3
+
+# Django migrations (opcional, pero muchos no las ignoran)
+# Si quieres versionar tus migraciones, ¡NO ignores esta línea!
+#*/migrations/
+
+# macOS/Linux/Windows files
+.DS_Store
+Thumbs.db
+
+# Test coverage
+htmlcov/
+.coverage
+.tox/
+.nox/
+
+# Logs
+*.log
+
+# Node (si tienes JS en tu proyecto Django)
+node_modules/
+
+# Docker
+*.pid
+docker-compose.override.yml
+
+# Pytest
+.pytest_cache/
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+
+# Pipenv
+Pipfile.lock
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# VSCode launch configs
+.vscode/launch.json
+
+# Gunicorn/PID files
+gunicorn.pid
+
+.idea
