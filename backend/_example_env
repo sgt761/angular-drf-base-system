@@ -1,0 +1,12 @@
+SECRET_KEY=7^QA&bXr5v3M$pi$
+DEBUG=True
+
+DB_NAME=example_bd
+DB_USER=example_admin
+DB_PASSWORD=example_pass
+DB_HOST=postgres
+DB_PORT=example_port_5432
+
+ALLOWED_HOSTS=localhost,127.0.0.1
+CORS_ALLOWED_ORIGINS=http://localhost:4200,http://localhost:51524
+CSRF_TRUSTED_ORIGINS=http://localhost:4200,http://localhost:51524
